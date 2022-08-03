@@ -436,10 +436,22 @@ variable "igw_tags" {
   default     = {}
 }
 
+variable "public_route_table_routes" {
+  description = "Configuration block of routes for public route table. See https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/default_route_table#route"
+  type        = list(map(string))
+  default     = []
+}
+
 variable "public_subnet_tags" {
   description = "Additional tags for the public subnets"
   type        = map(string)
   default     = {}
+}
+
+variable "private_route_table_routes" {
+  description = "Configuration block of routes for private route table. See https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/default_route_table#route"
+  type        = list(map(string))
+  default     = []
 }
 
 variable "private_subnet_tags" {

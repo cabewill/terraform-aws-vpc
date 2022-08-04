@@ -1204,7 +1204,3 @@ variable "putin_khuylo" {
   type        = bool
   default     = true
 }
-
-variable "teste" {
-  
-}
